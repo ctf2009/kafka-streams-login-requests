@@ -1,0 +1,9 @@
+rootProject.name = 'kafka-streams-example'
+include 'streams-example-driver'
+include 'streams-common'
+include 'login-viewer'
+include 'streams-login-processor'
+include 'streams-ip-enrichment'
+include 'streams-known-location-check'
+include 'streams-suspicious-ip-check'
+

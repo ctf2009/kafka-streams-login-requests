@@ -1,0 +1,29 @@
+server:
+  port: 9000
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    listener:
+      missing-topics-fatal: false
+      ack-mode: MANUAL_IMMEDIATE
+      concurrency: 1
+
+    consumer:
+      group-id: login-viewer-group
+      auto-offset-reset: earliest
+
+      properties:
+#        spring.json.trusted.packages: "ctf.kafka.streams.common"
+#        spring.json.value.default.type: "ctf.kafka.streams.common.model.LoginRequest"
+
+        spring:
+          json:
+            trusted.packages: "ctf.kafka.streams.common"
+            value.default.type: "ctf.kafka.streams.common.model.LoginRequest"
+            type.mapping: "loginRequest:ctf.kafka.streams.common.model.LoginRequest,
+                           notification:ctf.kafka.streams.common.model.Notification"
+
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer

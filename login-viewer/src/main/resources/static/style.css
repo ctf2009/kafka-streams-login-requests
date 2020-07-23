@@ -1,0 +1,29 @@
+body { display: flex; min-height: 100vh; flex-direction: column; height: 100%; }
+
+.flex { display: flex; flex-wrap: wrap; min-height: 100vh; }
+.center-div { width: 50%; margin: 0 auto; }
+
+#loading { padding-bottom: 10px; }
+
+.standout { font-weight: bolder; }
+
+main {
+  padding-bottom: 20px;
+  flex: 1 0 auto;
+}
+
+table {
+  border-collapse: separate;
+  padding-top: 30px
+}
+
+th {
+  font-weight: normal;
+}
+
+nav { height: 50px; line-height: 50px; }
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons { height: 50px; line-height: 50px; }
+nav .button-collapse i { height: 50px; line-height: 50px; }
+nav .brand-logo { font-size: 1.6rem; padding-bottom: 5px; padding-left: 5px; }
+
+.page-footer { padding: 0px; max-height: 35px; }

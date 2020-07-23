@@ -1,0 +1,14 @@
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_11
+    }
+
+    version = '1.0.0-SNAPSHOT'
+}

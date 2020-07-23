@@ -1,0 +1,21 @@
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+dependencies {
+    annotationProcessor 'org.projectlombok:lombok:1.18.6'
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+
+    compileOnly("org.apache.kafka:kafka-streams:2.5.0")
+
+    implementation("com.fasterxml.jackson.core:jackson-annotations:2.11.0")
+
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.6'
+    testCompileOnly 'org.projectlombok:lombok:1.18.6'
+}
+
+test {
+    useJUnitPlatform()
+}
