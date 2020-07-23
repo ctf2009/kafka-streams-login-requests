@@ -35,14 +35,30 @@ There are a number of drivers that will publish messages to the Login Request to
 ## Other Useful Kafka Commands
 
 ### Get All Topics
-```docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --list --bootstrap-server localhost:9092```
+```
+docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --list --bootstrap-server localhost:9092
+```
 
 ### Describe Topics
-```docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic login_request```
-```docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic login_request_history```
-```docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic ip_processing```
-```docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic ip_enriched```
-```docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic user_known_locations```
+```
+docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic login_request
+```
+
+```
+docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic login_request_history
+```
+
+```
+docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic ip_processing
+```
+
+```
+docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic ip_enriched
+```
+
+```
+docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-topics --describe --bootstrap-server localhost:9092 --topic user_known_locations
+```
 
 ### Get All Consumer Groups
 ```docker run --net=host confluentinc/cp-server:5.4.0 /usr/bin/kafka-consumer-groups --list --bootstrap-server localhost:9092```
